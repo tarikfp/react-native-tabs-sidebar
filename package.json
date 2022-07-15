@@ -14,8 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-navigation/react-navigation.git",
-    "directory": "packages/bottom-tabs"
+    "url": "https://github.com/tarikpnr/react-native-tabs-sidebar"
   },
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.tsx",
