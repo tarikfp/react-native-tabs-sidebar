@@ -1,7 +1,7 @@
 {
   "name": "@tarikfp/react-native-tabs-sidebar",
   "description": "Wrapper library over the @react-navigation/bottom-tabs. The main purpose of this library is to support displaying tabbar on side.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "react-native-component",
     "react-component",
