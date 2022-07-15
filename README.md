@@ -1,4 +1,4 @@
-# React Navigation Side Bar
+# React Navigation Side Bar &middot; ![npm](https://img.shields.io/npm/v/@tarikfp/react-native-tabs-sidebar)
 
 Wrapper library over the @react-navigation/bottom-tabs. The main purpose of this library is to support displaying tabbar on side.
 
@@ -9,14 +9,18 @@ If you wanted to use sidebar in your tablet/mobile apps, but haven't found a way
 
 ## Usage
 
-Provide `tabBarPosition` prop with the desired value to the screenOptions object. That's it! 🎉
+Provide `tabBarPosition` prop with the desired value to the screenOptions config. That's it! 🎉
 
 ```
+import {createBottomTabNavigator} from '@tarikfp/react-native-tabs-sidebar';
+
+    const TabBar = createBottomTabNavigator();
+
     <TabBar.Navigator
       backBehavior="initialRoute"
       screenOptions={({route}) => ({
         ...otherOptions
-        tabBarPosition: "left",
+        tabBarPosition: "left"
       })}>
       <TabBar.Screen name={RouteNames.Home} component={HomeScreen} />
     </TabBar.Navigator>
