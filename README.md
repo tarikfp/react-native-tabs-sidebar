@@ -11,13 +11,15 @@ If you wanted to use sidebar in your tablet/mobile apps, but haven't found a way
 
 Provide `tabBarPosition` prop with the desired value to the screenOptions config. That's it! 🎉
 
+Tabs will be displayed on the bottom in case `tabBarPosition` is undefined.
+
 ```
 import {createBottomTabNavigator} from '@tarikfp/react-native-tabs-sidebar';
 
     const TabBar = createBottomTabNavigator();
 
     <TabBar.Navigator
-      backBehavior="initialRoute"
+      ...
       screenOptions={({route}) => ({
         ...otherOptions
         tabBarPosition: "left"
@@ -58,3 +60,36 @@ import {createBottomTabNavigator} from '@tarikfp/react-native-tabs-sidebar';
 #### iOS
 
 [![wwupdQ.md.png](https://iili.io/wwupdQ.md.png)](https://freeimage.host/i/wwupdQ)
+
+
+### Dynamic usage
+
+You can prefer not to use sidebar in some specific cases. To do so;
+
+```
+    <TabBar.Navigator
+      ...
+      screenOptions={({route}) => ({
+        ...otherOptions
+        tabBarPosition: route.name === "yourRouteName" ? "right" : undefined
+      })}>
+      <TabBar.Screen name={RouteNames.Home} component={HomeScreen} />
+    </TabBar.Navigator>
+```
+
+
+### Bottom tabbar usage
+
+Display on bottom, default behavior.
+```
+    <TabBar.Navigator
+      ...
+      screenOptions={({route}) => ({
+        ...otherOptions
+        tabBarPosition: undefined // or do not provide tabBarPosition
+      })}>
+      <TabBar.Screen name={RouteNames.Home} component={HomeScreen} />
+    </TabBar.Navigator>
+```
+
+[![ww746u.png](https://iili.io/ww746u.png)](https://freeimage.host/)
